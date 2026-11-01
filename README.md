@@ -3,8 +3,6 @@
 **Decouple Re-Identification and Human Parsing with Task-specific Features for Occluded Person Re-identification**
 [Paper (arXiv:2401.18032)](https://arxiv.org/abs/2401.18032) · IEEE TBIOM 2026
 
-This repository contains the HRNet-W32 + FPN image-based DROP implementation, with training, evaluation, human-parsing mask transforms, and dataset configurations. The part-based representation learning framework is adapted from BPBreID/Torchreid. The legacy `model.bpbreid` configuration namespace and `bpbreid` model alias are retained for compatibility; new configurations select `model.name: drop`.
-
 ## Installation
 
 Use Python 3.10–3.12 with the pinned dependencies below. Create an isolated environment and install a matching PyTorch/torchvision pair for your machine before installing this project. For example, a CPU environment for the smoke tests:
