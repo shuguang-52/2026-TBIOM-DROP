@@ -1,0 +1,57 @@
+data:
+  root: 'reid-data'
+  sources: ['p_dukemtmc_reid']
+  targets: ['p_dukemtmc_reid']
+  height: 384
+  width: 128
+  workers: 32
+  transforms: ['rc', 're']
+
+model:
+  name: 'drop'
+  save_model_flag: False
+  load_weights: ''  # Required: pass a trained DROP checkpoint via model.load_weights.
+  pretrained: False
+  bpbreid:
+    pooling: 'gwamp'
+    use_decouple: 'fpn'
+    mask_filtering_training: False
+    mask_filtering_testing: True
+    learnable_attention_enabled: True
+    backbone: 'hrnet32'
+    hrnet_pretrained_path: 'pretrained_models'
+    test_use_target_segmentation: 'none'
+    test_embeddings: ['bn_foreg', 'parts']
+    masks:
+      dir: 'pifpaf_maskrcnn_filtering'
+      preprocess: 'eight'
+
+loss:
+  name: 'part_based'
+  part_based:
+    name: 'part_averaged_triplet_loss'
+    ppl: 'cl'
+    weights:
+      globl:
+        id: 1.
+        tr: 0.
+      foreg:
+        id: 1.
+        tr: 0.
+      conct:
+        id: 1.
+        tr: 0.
+      parts:
+        id: 0.
+        tr: 1.
+      pixls:
+        ce: 0.4
+
+train:
+  batch_size: 64
+  eval_freq: 40
+
+test:
+  evaluate: True
+  batch_size: 64
+  visrank: False

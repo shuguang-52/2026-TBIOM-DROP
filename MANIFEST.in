@@ -1,0 +1,3 @@
+include LICENSE README.md THIRD_PARTY_NOTICES.md requirements.txt
+recursive-include configs *.yaml
+recursive-include torchreid/metrics/rank_cylib *.pyx

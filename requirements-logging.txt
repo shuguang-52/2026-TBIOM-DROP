@@ -1,0 +1,6 @@
+# Optional: install only when enabling the corresponding logger.
+wandb
+tensorboard
+clearml
+neptune-client<1
+pandas>=2,<3
