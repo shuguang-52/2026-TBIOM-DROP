@@ -1,7 +1,7 @@
 # DROP
 
-**Decouple Re-Identification and Human Parsing with Task-specific Features for Occluded Person Re-identification**
-[Paper (arXiv:2401.18032)](https://arxiv.org/abs/2401.18032) · IEEE TBIOM 2026
+**Decouple Re-Identification and Human Parsing for Occluded Person Re-Identification**
+[Paper (IEEE TBIOM 2026)](https://doi.org/10.1109/TBIOM.2026.3680760) · Vol. 8, No. 4, pp. 666–677
 
 ## Installation
 
@@ -80,11 +80,16 @@ The default evaluator uses Python/NumPy. The retained Cython source is optional 
 ## Citation
 
 ```bibtex
-@article{dou2024drop,
-  title={DROP: Decouple Re-Identification and Human Parsing with Task-specific Features for Occluded Person Re-identification},
-  author={Dou, Shuguang and Jiang, Xiangyang and Tu, Yuanpeng and Gao, Junyao and Qu, Zefan and Zhao, Qingsong and Zhao, Cairong},
-  journal={arXiv preprint arXiv:2401.18032},
-  year={2024}
+@article{dou2026decouple,
+  title={Decouple Re-Identification and Human Parsing for Occluded Person Re-Identification},
+  author={Dou, Shuguang and Tu, Yuanpeng and Lin, Yanna and Gao, Junyao and Zhao, Cairong},
+  journal={IEEE Transactions on Biometrics, Behavior, and Identity Science},
+  year={2026},
+  volume={8},
+  number={4},
+  pages={666--677},
+  doi={10.1109/TBIOM.2026.3680760},
+  url={https://doi.org/10.1109/TBIOM.2026.3680760}
 }
 ```
 
