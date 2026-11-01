@@ -18,9 +18,9 @@ Volume 8, Issue 4, Pages 666–677, 2026
 DROP addresses occluded person re-identification by decoupling the feature paths for identity representation and human parsing. A shared HRNet-W32 backbone supplies multi-scale features: the ReID path learns appearance representations, while an FPN parsing path predicts semantic part masks with height-position information. The predicted masks guide foreground/part pooling and visibility-aware matching.
 
 <p align="center">
-  <img src="figures/drop-overview.svg" width="100%" alt="DROP implementation overview: a shared HRNet backbone feeds separate ReID and FPN parsing paths; predicted part masks guide pooling and visibility-aware matching.">
+  <img src="figures/drop-framework.png" width="100%" alt="Original DROP framework figure showing the human position-aware parsing branch and parsing-guided ReID branch.">
   <br>
-  <em>Overview of the released HRNet-W32 + FPN implementation.</em>
+  <em>DROP framework. Original Fig. 2 from the <a href="https://arxiv.org/html/2401.18032v1#S3.F2">author preprint (arXiv:2401.18032v1)</a>.</em>
 </p>
 
 This repository contains the paper's HRNet + FPN model, training and evaluation code, and configurations for six person ReID datasets.
